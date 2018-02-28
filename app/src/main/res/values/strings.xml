@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidTVTestApp</string>
+    <string-array name="list_of_test_case">
+        <item>Scan Test</item>
+        <item>Tuner Test</item>
+        <item>Section Filter Test</item>
+        <item>Recording Test</item>
+        <item>Blocking Port Test</item>
+    </string-array>
+</resources>
