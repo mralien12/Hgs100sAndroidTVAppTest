@@ -44,6 +44,8 @@ public class ScanActivity extends Activity {
 
     private ArrayAdapter<String> channel_adapter;
 
+    private String TestcaseName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,11 @@ public class ScanActivity extends Activity {
 
         btnFail = (ImageButton) findViewById(R.id.btnFail);
         btnFail.setOnClickListener(new btnFailOnClickListener());
+
+        btnHelp = findViewById(R.id.btnHelp);
+        btnHelp.setOnClickListener(new btnHelpOnClickListener());
+
+        TestcaseName = this.getClass().getName();
     }
 
     private RScanParam generateParam(String satName, int lnb_freq, int transponder_freq){
@@ -186,6 +193,7 @@ public class ScanActivity extends Activity {
         public void onClick(View view) {
             Intent intent = new Intent();
             intent.putExtra(TestCase.TEST_RESULT, true);
+            intent.putExtra(TestCase.TC_NAME, TestcaseName);
             setResult(RESULT_OK, intent);
             finish();
         }
@@ -196,8 +204,18 @@ public class ScanActivity extends Activity {
         public void onClick(View view) {
             Intent intent = new Intent();
             intent.putExtra(TestCase.TEST_RESULT, false);
+            intent.putExtra(TestCase.TC_NAME, TestcaseName);
             setResult(RESULT_OK, intent);
             finish();
+        }
+    }
+
+    private class btnHelpOnClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            //TODO Describe detail scan test case
+            Toast.makeText(getApplicationContext(), "This button will show detail about test case",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -12,10 +12,30 @@ package alticast.com.androidtvtestapp;
  */
 public class TestCase {
     public static final int SCAN_TEST = 0;
-    public static final int RECORDING_TEST = 1;
-    public static final int TUNER_TEST = 2;
-    public static final int SECTION_FILTER_TEST = 3;
+    public static final int TUNER_TEST = 1;
+    public static final int SECTION_FILTER_TEST = 2;
+    public static final int RECORDING_TEST = 3;
     public static final int BLOCKING_PORT_TEST = 4;
 
-    public static final String TEST_RESULT = "RESULT";
+    public static final String TEST_RESULT = "result";
+    public static final String TC_NAME = "TC_name";
+
+    private String name;
+    private boolean testResult;
+
+    public boolean getTestResult() {
+        return testResult;
+    }
+
+    public void setTestResult(boolean testResult) {
+        this.testResult = testResult;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

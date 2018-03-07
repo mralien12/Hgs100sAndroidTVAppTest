@@ -19,6 +19,11 @@
             android:textColor="@color/textcolor_white"
             android:textSize="@dimen/lb_browse_header_text_size" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_step1"
+            android:textSize="@dimen/lb_action_text_size"/>
         <Button
             android:id="@+id/btnScan"
             android:layout_width="wrap_content"
@@ -41,6 +46,11 @@
 
         </ListView>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_step2"
+            android:textSize="@dimen/lb_action_text_size"/>
         <Button
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
