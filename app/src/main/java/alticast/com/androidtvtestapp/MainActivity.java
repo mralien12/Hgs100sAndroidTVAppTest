@@ -111,8 +111,6 @@ public class MainActivity extends Activity {
                     startActivityForResult(intent, TestCase.SCAN_TEST);
                     break;
                 case TestCase.RECORDING_TEST:
-                    intent = new Intent(getApplication(), PlayerActivity.class);
-                    startActivityForResult(intent, TestCase.RECORDING_TEST);
                     break;
                 case TestCase.BLOCKING_PORT_TEST:
                     break;
