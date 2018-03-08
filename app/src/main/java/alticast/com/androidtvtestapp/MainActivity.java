@@ -148,7 +148,7 @@ public class MainActivity extends Activity {
 
             try {
                 xmlSerializer.setOutput(fileOutputStream, "UTF-8");
-                xmlSerializer.startDocument(null, Boolean.valueOf(false));
+                xmlSerializer.startDocument(null, false);
                 xmlSerializer.setFeature("http://xmlpull.org/v1/doc/features.html#indent-output", true);
                 xmlSerializer.startTag(null, "Result");
                 xmlSerializer.attribute(null, "suite_name", "TCTS_VERIFIER");
